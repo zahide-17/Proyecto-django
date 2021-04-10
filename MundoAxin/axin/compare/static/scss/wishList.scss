@@ -1,0 +1,45 @@
+.compare-table{
+    
+    margin: 15% auto;
+    text-align: center;
+    width: 70%;
+    
+
+    .table-head{
+        border: 2px dotted #D8abb1;
+        font-family: "Handlee", cursive;
+        font-size: .9em;
+
+        .table-item {
+            color:gray;
+        }
+    }
+    .item-img{
+        margin: 0;
+        padding: 0;
+        width: 15%;
+        .table-img{
+            width: 100%;  
+        }
+    }
+
+    .table-item{
+        font-family: "Handlee", cursive;
+        font-size: .7em;
+
+    }
+
+    .item-link{
+        margin: 0;
+        padding: 0;
+        width: 15%;
+
+        .link{
+            img{
+                width: 50%;
+            }
+            
+        }
+
+    }
+}

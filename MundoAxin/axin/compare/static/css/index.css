@@ -1,46 +1,75 @@
-@import url("https://fonts.googleapis.com/css?family=Alegreya:900|Open+Sans|Slabo+27px&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Mystery+Quest");
+@import url("https://fonts.googleapis.com/css2?family=Lobster+Two:wght@700&family=Yatra+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merienda:wght@700&family=Yatra+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Handlee&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
 .navbar {
-  background-color: #F7F0F6;
-  padding: 10px 15px;
+  background-color: #D8abb1;
 }
-.navbar .navbar-brand img {
-  margin: 0;
-  width: 30%;
+.navbar .navbar-link {
+  width: 20%;
 }
-.navbar .collapse .navbar-nav {
-  text-align: left;
-  color: purple;
+.navbar .navbar-link .navbar-img {
+  width: 100%;
 }
-.navbar .collapse .navbar-nav .nav-item {
+.navbar .navbar-item {
+  width: 75%;
+  display: inline-flex;
+  justify-content: center;
+  margin: 2%;
+}
+.navbar .navbar-item .item-list {
+  width: 100%;
+  padding: 0 20px;
+  list-style: none;
+  text-align: center;
+}
+.navbar .navbar-item .item-list .item-link {
+  font-family: "Lobster Two", cursive;
+  color: white;
+  font-size: 1em;
+}
+.navbar .navbar-item .item-text {
+  margin: auto;
+  padding-right: 5px;
+  list-style: none;
+  font-family: "Merienda", cursive;
+  font-size: 0.7em;
+  color: white;
+  text-align: end;
+}
+.navbar .navbar-item .item-link .navbar-button {
+  border: none;
+  font-family: "Merienda", cursive;
+  border-radius: 10%;
+  background-color: white;
+  color: #D8abb1;
   font-size: 0.6em;
+  cursor: pointer;
+  padding: 9px 25px;
 }
-.navbar .collapse .navbar-nav .nav-item .nav-link {
-  color: #600950;
+
+.form-search {
+  width: 40%;
+  margin: 9% auto;
+  font-family: "Merienda", cursive;
 }
-.navbar .collapse .form-inline {
-  font-size: 0.5em;
-  width: 30%;
-  padding: 0;
-  text-align: auto;
+.form-search .input-search {
+  border: 2px solid #b9264b;
+  text-align: center;
+  color: #D8abb1;
 }
-.navbar .collapse .form-inline input {
-  border: 2px solid #9B0071;
-  padding-left: 0;
-  margin-right: 10px;
-}
-.navbar .collapse .form-inline button {
-  background-color: #9B0071;
-  border-radius: 10px;
-  border: 0;
-  color: #FFFFFF;
-  width: 25%;
-  padding: 5px 10px;
+.form-search .button-search {
+  border: 2px solid #b9264b;
+  background-color: white;
+  font-family: "Merienda", cursive;
+  color: #D8abb1;
 }
 
 .main-container {
   display: flex;
   text-align: center;
-  margin: 85px auto 0;
+  justify-content: space-between;
 }
 @media (max-width: 575px) {
   .main-container {
@@ -50,15 +79,14 @@
 }
 .main-container .main-item-text {
   flex: 2;
-  background-image: url(/static/logos/plumatenue.jpeg);
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-color: #F9F9F9;
+  /*#F6F6F6;*/
 }
 .main-container .main-item-text h1 {
-  font-family: "Alegreya", serif;
-  font-size: 1.8em;
-  color: #600950;
-  margin: 150px 100px 50px;
+  font-family: "Lobster Two", cursive;
+  font-size: 2em;
+  color: #b9264b;
+  margin: 10%;
 }
 @media (max-width: 575px) {
   .main-container .main-item-text h1 {
@@ -67,7 +95,8 @@
   }
 }
 .main-container .main-item-text p {
-  font-size: 0.6em;
+  font-size: 0.8em;
+  font-family: "Handlee", cursive;
   color: #566573;
   line-height: 30px;
   padding: 30px 150px 50px;
@@ -81,11 +110,19 @@
     padding: 0;
   }
 }
+.main-container .main-item-text h3 {
+  font-family: "Handlee", cursive;
+}
 @media (max-width: 575px) {
   .main-container .main-item-text h3 {
     font-size: 20px;
     margin-bottom: 20px;
   }
+}
+.main-container .main-item-text h4 {
+  font-family: "Lobster Two", cursive;
+  font-size: 1em;
+  color: #b9264b;
 }
 @media (max-width: 575px) {
   .main-container .main-item-text .signup-form {
@@ -133,21 +170,22 @@
     height: 55px;
   }
 }
-.main-container .main-item-image {
+.main-container .main-item-carousel {
+  padding-top: 50px;
   flex: 1;
-  margin: 0;
 }
-.main-container .main-item-image img {
-  width: 100%;
-}
-@media (max-width: 575px) {
-  .main-container .main-item-image {
-    display: none;
-  }
+
+.title {
+  padding: 5%;
+  margin: auto;
+  font-family: "Lobster Two", cursive;
+  font-size: 1.5em;
+  width: 30%;
+  color: #b9264b;
 }
 
 .compare-article {
-  background-image: url(/static/logos/uno.png);
+  background-image: url(Logos/uno.png);
   background-repeat: no-repeat;
   background-size: cover;
   display: grid;
@@ -156,11 +194,10 @@
   grid-gap: 20px;
   justify-content: center;
   justify-items: center;
-  padding: 200px 100px;
 }
 @media (max-width: 575px) {
   .compare-article {
-    background-image: url(/static/logos/uno.png);
+    background-image: url(Logos/uno.png);
     background-repeat: no-repeat;
     background-size: cover;
     display: grid;
@@ -258,41 +295,7 @@
 
 .container {
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  margin: 100px auto;
-}
-.container .container-carousel {
-  flex: 2;
-}
-.container .container-carousel .carousel {
-  width: 65%;
-  margin: auto;
-}
-.container .container-vdo {
-  flex: 1;
-  margin-top: 20px;
-}
-@media (max-width: 575px) {
-  .container .container-vdo {
-    display: none;
-  }
-}
-
-.trademarks {
-  margin: 50px 0;
-  background-color: palevioletred;
-  width: 100%;
-}
-.trademarks img {
-  position: relative;
-  left: 280px;
-  width: 60%;
-}
-@media (max-width: 575px) {
-  .trademarks img {
-    left: 60px;
-  }
+  align-items: center;
 }
 
 .footer {
@@ -307,8 +310,8 @@
 
 body {
   display: block;
-  background-color: #FFFFFF;
+  background-color: #F9F9F9;
   font-size: 30px;
 }
 
-/*# sourceMappingURL=styles.css.map */
+/*# sourceMappingURL=index.css.map */

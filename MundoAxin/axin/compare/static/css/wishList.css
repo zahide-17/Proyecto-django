@@ -1,0 +1,35 @@
+.compare-table {
+  margin: 15% auto;
+  text-align: center;
+  width: 70%;
+}
+.compare-table .table-head {
+  border: 2px dotted #D8abb1;
+  font-family: "Handlee", cursive;
+  font-size: 0.9em;
+}
+.compare-table .table-head .table-item {
+  color: gray;
+}
+.compare-table .item-img {
+  margin: 0;
+  padding: 0;
+  width: 15%;
+}
+.compare-table .item-img .table-img {
+  width: 100%;
+}
+.compare-table .table-item {
+  font-family: "Handlee", cursive;
+  font-size: 0.7em;
+}
+.compare-table .item-link {
+  margin: 0;
+  padding: 0;
+  width: 15%;
+}
+.compare-table .item-link .link img {
+  width: 50%;
+}
+
+/*# sourceMappingURL=wishList.css.map */

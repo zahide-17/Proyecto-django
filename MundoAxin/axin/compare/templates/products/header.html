@@ -1,0 +1,31 @@
+{% block content %}      
+    <nav class="navbar fixed-top">
+        <a class="navbar-link" href="#">
+            <img class="navbar-img" src="/static/logos/logo-final.png" alt="Mundo Axin" />
+        </a>
+        <ul class="navbar-item">
+            <li class="item-list">
+                <a class="item-link" href="/">Inicio</a>
+            </li>
+            <li class="item-list">
+                <a class="item-link" href="/">Maquillaje</a>
+            </li>
+            <li class="item-list">
+                <a class="item-link" href="/compare">Comparar</a>
+            </li>
+            <li class="item-list">
+                <a class="item-link" href="/">Ofertas</a>
+            </li>
+            <li class="item-list">
+                <a class="item-text" href="#">{{user.username}}</a>
+            </li>
+            <a class="item-link" href="/logout/">
+                <button class="navbar-button" >Salir</button>
+            </a>
+            <a class="item-link" href="/login/">
+                <button class="navbar-button" >Login</button>
+            </a>
+        </ul> 
+    </nav>
+{% endblock %}
+

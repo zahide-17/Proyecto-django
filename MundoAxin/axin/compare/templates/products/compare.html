@@ -7,44 +7,64 @@
           integrity= "sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
           crossorigin= "anonymous"
         >
-        <link rel= "stylesheet" type="text/css" href="compare.css">
+        <link rel= "stylesheet" type="text/css" href="/static/css/index.css">
+        <link rel= "stylesheet" type="text/css" href="/static/css/compare.css">
 
     </head>
     <body>
-        <header>
-            {% include 'navbar.html' %}
-        </header>
+        {% include "products/header.html" %}
+
+        <article class="product-article">
+            {%  for products in product %}
+                {% if products.name_product == 'Powder Kiss Lipstick' %}
+                    <div class="section-product">
+                            <img class="img-product" src=" {{ products.image }}" />
+                    </div>
+                    <div class="section-product section-text">
+                        <h2>
+                            {{ products.name_product }}
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            {{ products.mark }}
+                        </h2> 
+                    </br>
+                        {% for store in product_Store %}
+                            {% if products.name_product == store.name_product %}
+                                {{ store.description }} </br>
+                            {% endif %}
+                        {% endfor %}  
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </article>
+        
+        
 <!--
         <caption>A continuacion te muestro los mejores precios desde el menor a mayor precio</caption>
--->
+-->     
         <table class="compare-table">
-            <tr>
-                <th class="table-head">Producto</th>
+            <tr class="th-table">
+                <th class="table-head">Tienda</th>
                 <th class="table-head">Precio</th>
                 <th class="table-head">Comprar</th>
             </tr>
-            <tr>
-                <td class="product">Lipstic Mac Red</td>
-                <td class="product">$ 350.00</td>
-                <td class="product">
-                    <a href="#">Carrito</a>
-                </td>
-            </tr>
-            <tr>
-                <td class="product">Lipstic Mac Red</td>
-                <td class="product">$ 350.00</td>
-                <td class="product">
-                    <a href="#">Carrito</a>
-                </td>
-            </tr>
-            <tr>
-                <td class="product">Lipstic Mac Red</td>
-                <td class="product">$ 350.00</td>
-                <td class="product">
-                    <a href="#">Carrito</a>
-                </td>
-            </tr>
+            {% for store in product_Store %}
+                {% if store.name_product == 'Powder Kiss Lipstick' %}
+                    <tr class="tr-table">
+                        <td class="table-item">{{store.id_store.name}}</td>
+                        <td class="table-item">${{store.price}}.00</td>
+                        <td class="table-link">
+                            <a class="link" href="{{store.id_store.url}}">Carrito</a>
+                        </td>
+                    </tr>
+                {% endif %}   
+            {% endfor %} 
         </table>
+        <form class=form-search>
+            <input class="input-search" type="search" placeholder="Busca un producto" aria-label="Search">
+            <button class="button-search" type="submit">Buscar</button>
+        </form>
+        {% include "products/footer.html" %}
+        
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>

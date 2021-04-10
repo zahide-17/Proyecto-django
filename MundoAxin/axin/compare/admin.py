@@ -20,7 +20,7 @@ class ProductStoreAdmin(admin.ModelAdmin):
 
 class ProductAdmin(admin.ModelAdmin):
     # Se sobre escribe lo que hace __str__
-    list_display = ("name_product","mark","id_product","name_category")
+    list_display = ("name_product","mark","product_store","name_category")
 
 class WishListAdmin(admin.ModelAdmin):
     # Se sobre escribe lo que hace __str__

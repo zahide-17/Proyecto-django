@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/static/css/login.css">
+    <title>Welcome</title>
+</head>
+<body>
+    </nav>
+    <div class="login-box">
+        <img class="login-img" src="/static/logos/logo.jpeg" alt="Logo Mundo Axin">
+        <h1>Login Here</h1>
+        <form class="login-form" method="post">
+            {% csrf_token %}
+            <!--UserName-->
+            <!--<label for="username">UserName</label>-->
+            Usuario: <input class="input-text" type="text" placeholder="Enter Username" name="username" value=""required>
+            <!--Password-->
+            <!--<label for="password">Password</label>-->
+            Password: <input class="input-text" type="password" placeholder="Enter Password" name="password" value=""required>
+            {% if next %}
+            <input type="hidden" name="next" value="{{ next }}" />
+            {% else %}
+            <input type="hidden" name="next" value="/" />
+            {% endif %}
+            <button class="button-tour margin-top-sm" style="align-self: center; width:50%;" type="submit" name="button">
+                 Entrar
+            </button></br>
+            <a href="/">Lost your password?</a></br>
+            <a href="/register/">Crea una cuenta</a>
+        </form>
+    </div>
+</body>
+</html>

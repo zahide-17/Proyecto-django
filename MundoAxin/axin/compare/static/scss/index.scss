@@ -1,63 +1,85 @@
 @use 'global' as *;
-@import url("https://fonts.googleapis.com/css?family=Alegreya:900|Open+Sans|Slabo+27px&display=swap");
-
+@import url("https://fonts.googleapis.com/css?family=Mystery+Quest");
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:wght@700&family=Yatra+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@700&family=Yatra+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
 
 .navbar {
-    background-color: $color-navbar;
-    padding: 10px 15px ;
+    background-color:#D8abb1;
 
-    .navbar-brand {
-
-        img {
-            margin: 0;
-            width: 30%;
+    .navbar-link{
+        width: 20%;
+        .navbar-img{
+            width: 100%;
         }
     }
-
-    .collapse {
-
-        .navbar-nav {
-            text-align: left;
-            color:purple;
+    .navbar-item{
+        width: 75%;
+        display: inline-flex;
+        justify-content: center;
+        margin: 2%;
+        
+        .item-list{
+            width: 100%;
+            padding: 0 20px;
+            list-style: none;
+            text-align: center;
+            
+            .item-link{
+                font-family: 'Lobster Two', cursive;
+                color: white;
+                font-size: 1em;
+             }
         }
 
-        .navbar-nav {
-            .nav-item {
-                font-size: .6em;
-                .nav-link {
-                    color: $dark-purple;
-                }
+        .item-text{
+            margin: auto;
+            padding-right: 5px;
+            list-style: none;
+            font-family: 'Merienda', cursive;
+            font-size: .7em;
+            color: white;
+            text-align: end;           
+        }
+        .item-link{
+            .navbar-button{
+                border: none;
+                font-family: 'Merienda', cursive;
+                border-radius: 10%;
+                background-color: white;
+                color: #D8abb1;
+                font-size:.6em;
+                cursor: pointer;
+                padding: 9px 25px;
             }
         }
-
-        .form-inline {
-            font-size: .5em;
-            width: 30%;
-            padding: 0;
-            text-align:auto;
-
-            input {
-                border:2px solid $color-buttom;
-                padding-left: 0;
-                margin-right: 10px;
-            }
-
-            button {
-                background-color: $color-buttom;
-                border-radius: 10px;
-                border: 0;
-                color: $color-white;
-                width: 25%;
-                padding: 5px 10px;
-            }
-        }
+        
     }
 }
 
+.form-search{
+    width: 40%;
+    margin: 9% auto;
+    font-family: 'Merienda', cursive;  
+
+    .input-search{
+        border: 2px solid #b9264b;
+        text-align: center;
+        color:#D8abb1;
+    }
+    .button-search{
+        border: 2px solid #b9264b;
+        background-color: white;
+        font-family: 'Merienda', cursive;
+        color:#D8abb1; 
+    }
+}
+ 
 .main-container {
     display: flex;
     text-align: center;
-    margin: 85px auto 0;
+    justify-content:space-between;
 
     @media (max-width: 575px){
         display: block;
@@ -66,15 +88,15 @@
 
     .main-item-text {
         flex: 2;
-        background-image: url(Logos/plumatenue.jpeg);
-        background-repeat: no-repeat;
-        background-size: cover;
+        background-color: #F9F9F9;
+        
+        /*#F6F6F6;*/
 
         h1{
-            font-family: "Alegreya", serif;
-            font-size: 1.8em;
-            color: $dark-purple;
-            margin: 150px 100px 50px;
+            font-family: 'Lobster Two', cursive;
+            font-size: 2em;
+            color: #b9264b;
+            margin: 10%;
 
             @media (max-width: 575px){
                 font-size: 30px;
@@ -83,7 +105,8 @@
         }
 
         p {
-            font-size: .6em;
+            font-size: .8em;
+            font-family: 'Handlee', cursive;
             color: $color-gray-p;
             line-height: 30px;
             padding: 30px 150px 50px;
@@ -98,10 +121,16 @@
         }
 
         h3 {
+            font-family: 'Handlee', cursive;
             @media (max-width: 575px){
                 font-size:20px;
                 margin-bottom: 20px;
             }
+        }
+        h4{
+            font-family: 'Lobster Two', cursive;
+            font-size: 1em;
+            color: #b9264b;
         }
         .signup-form{
             @media (max-width: 575px){
@@ -150,18 +179,20 @@
             }
         }
     }
-
-    .main-item-image {
+    .main-item-carousel{
+        padding-top: 50px;
         flex: 1;
-        margin: 0;
-        img {
-            width: 100%;
-        }
 
-        @media (max-width: 575px){
-            display: none;
-        }
     }
+}
+
+.title {
+    padding: 5%;
+    margin: auto;
+    font-family: 'Lobster Two', cursive;
+    font-size: 1.5em;
+    width: 30%;
+    color: #b9264b;
 }
 
 .compare-article {
@@ -174,7 +205,6 @@
     grid-gap: 20px;
     justify-content: center;
     justify-items: center;
-    padding: 200px 100px ;
 
     @media (max-width: 575px){
         background-image: url(Logos/uno.png);
@@ -276,7 +306,6 @@
                 }
             }
         }
-
         img {
             width: 100%;
         }
@@ -285,43 +314,7 @@
 
 .container {
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    margin: 100px auto;
-
-    .container-carousel {
-        flex:2;
-
-        .carousel{
-            width: 65%;
-            margin: auto;
-        }
-    }
-
-    .container-vdo {
-        flex:1;
-        margin-top: 20px;
-
-        @media (max-width: 575px){
-            display: none;
-        }
-    }
-}
-
-.trademarks {
-    margin: 50px 0;
-    background-color:palevioletred;
-    width: 100%;
-
-    img {
-        position: relative;
-        left: 280px;
-        width: 60%;
-
-        @media (max-width: 575px){
-         left: 60px;
-        }
-    }
+    align-items: center;
 }
 
 .footer {
@@ -336,10 +329,10 @@
 
 }
 
-
-
 body {
     display: block;
-    background-color: $color-white;
+    background-color:#F9F9F9;
     font-size: 30px;
 }
+
+  

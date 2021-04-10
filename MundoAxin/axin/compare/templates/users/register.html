@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bienvenido a Mundo Axin</title>
+    <link rel="stylesheet" href="/static/css/register.css">
+</head>
+<body>
+    <div class="login-box">
+        <img class="login-img" src="/static/logos/logo.jpeg" alt="Logo Mundo Axin">
+        <h1>Register Here</h1>
+        <form class="login-form signup-form" method="post">
+            {% csrf_token %}
+            Usuario: <input class="input-text" type="text" placeholder="Enter Username" name="username" value=""required>
+            Nombre: <input class="input-text" type="text" placeholder="Enter your name" name="name" value=""required>
+            Apellidos: <input class="input-text" type="text" placeholder="Enter your lastname" name="lastname" value=""required>
+            Email: <input class="input-text" type="email" name="email" value="" required>
+            Password: <input class="input-text" type="password" placeholder="Enter Password" name="password" value=""required>
+            Cumpleaños: <input class="input-text" type="date" name="birthdate" value="" required>
+            Genero: <input class="input-text" type="text" name="gender" value="" required>
+            Ciudad: <input class="input-text" type="text" name="city" value="" required>
+            <input type="submit" value="Register">
+        </form>
+    </div>
+</body>
+</html>

@@ -1,72 +1,69 @@
 @use 'global' as *;
 @import url("https://fonts.googleapis.com/css?family=Alegreya:900|Open+Sans|Slabo+27px&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
 
-.navbar {
-    background-color: $color-navbar;
-    padding: 10px 15px ;
+.product-article{
+    display: flex;
+    align-items: center;
+    margin-top: 200px;
+    height: 30%;
+    padding: 0 10%;
 
-    .navbar-brand {
 
-        img {
-            margin: 0;
-            width: 30%;
+    .section-product{
+        font-family: "Handlee", cursive;
+        color:#008080;
+        .img-product{
+            width: 100%;
         }
+        h2{
+            color: #000080;
+        } 
     }
-
-    .collapse {
-
-        .navbar-nav {
-            text-align: left;
-            color:purple;
-        }
-        .navbar-nav {
-            .nav-item {
-                font-size: .6em;
-                .nav-link {
-                    color: $dark-purple;
-                }
-            }
-        }
-        .form-inline {
-            font-size: .5em;
-            width: 30%;
-            padding: 0;
-            text-align:auto;
-
-            input {
-                border:2px solid $color-buttom;
-                padding-left: 0;
-                margin-right: 10px;
-            }
-
-            button {
-                background-color: $color-buttom;
-                border-radius: 10px;
-                border: 0;
-                color: $color-white;
-                width: 25%;
-                padding: 5px 10px;
-            }
-        }
+    .section-text{
+        margin-left: 5%;
     }
 }
 
 .compare-table {
-    font-size: .7em;
-    margin: 200px auto;
     text-align: center;
+    margin: 5% auto;
+    width: 50%;
+    
+    .th-table {
+        font-size: .9em;
+        font-family: "Handlee", cursive;
+        color: #000080;
+        .table-head {
+            border: 2px dotted #D8abb1;
+        }
+    }
+ 
+    .tr-table{
+        font-family: "Handlee", cursive;
+        font-size: .7em;
 
-    .table-head {
-        border: 2px solid black;
+        .table-item {
+            border: 2px dotted #D8abb1;
+            color:gray;
+        }
+        .table-link{
+            color:gray;
+            border: 2px dotted #D8abb1;
+            
+            .link{
+                color:#b9264b;
+            } 
+        }
     }
-    .product {
-        border: 2px solid black;
-    }
+}
+.form-search{
+    margin-bottom: 10%;
 }
 
 body {
     display: block;
-    background-color: $color-white;
+    background-color: #F9F9F9;
     font-size: 30px;
 }
 

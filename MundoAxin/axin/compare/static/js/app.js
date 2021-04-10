@@ -43,18 +43,17 @@ for (let i = 0; i < $forms.length; i++) {
 
 const mainText = document.getElementById("mainText");
 mainText.addEventListener("click", function () {
-  if(this.style.color !== "black")
-      this.style.color = "black";
+  if(this.style.color !== "#b9264b")
+      this.style.color = "#D8abb1";
   else
-      this.style.color ="#600950";
+      this.style.color ="#b9264b";
 
 })
 
-var Data = function (nameProduct, tradeMark, imgSrc, imgAlt) {
+var Data = function (nameProduct, tradeMark, imgSrc) {
     this.nameProduct = nameProduct;
     this.tradeMark = tradeMark;
     this.imgSrc = imgSrc;
-    this.imgAlt = imgAlt;
 }
 
 function createElements(tag,text) {
@@ -101,24 +100,22 @@ function createSection (productOne) {
 
     return article;
 }
-function createProduct () {
+function createProduct() {
   const section = document.getElementById("compareArticle");
-  var productOne = new Data("Satin Lipstick","MAC", imagen1,"Labial MAC");
-  var productTwo = new Data("Cremated Palette","Jeffree Star", imagen2, "Sombras de ojos");
-  for(var i=0; i<6;i++)
+  var productOne = new Data(nameProduct, mark, imagen1);
+  for(var i=0; i<12; i++)
   {
     section.appendChild(createSection(productOne));
-    section.appendChild(createSection(productTwo));
   }
 
 }
-createProduct();
+
+createProduct()
 
 /*Modificando el color del corazon */
-
 function colorHeart(){
   var heart = document.createElement("a");
-  //heart.href = "";
+  heart.href = heartLink;
   const offState = "heart-shape";
   const onState = `${offState} otherclass`;
   heart.className = offState;
@@ -133,3 +130,20 @@ function colorHeart(){
 
   return heart;
 }
+
+
+function changeButton(){
+  var buttonOne = document.getElementById("button_one").onclick();
+  var buttonTwo = document.getElementById("Button_two").onclick();
+
+  if(buttonOne){
+    buttonOne.style.visibility = 'hiden';
+    buttonTwo.style.visibility = 'visible';
+  }
+  else{
+    buttonOne.style.visibility = 'vosible';
+    buttonTwo.style.visibility = 'hiden'; 
+  }
+
+}
+

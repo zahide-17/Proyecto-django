@@ -22,31 +22,17 @@
 }
 
 .compare-table {
-  text-align: center;
-  margin: 5% auto;
-  width: 50%;
-}
-.compare-table .th-table {
-  font-size: 0.9em;
-  font-family: "Handlee", cursive;
-  color: #000080;
-}
-.compare-table .th-table .table-head {
-  border: 2px dotted #D8abb1;
-}
-.compare-table .tr-table {
-  font-family: "Handlee", cursive;
   font-size: 0.7em;
+  font-family: "Handlee", cursive;
+  text-align: center;
 }
-.compare-table .tr-table .table-item {
-  border: 2px dotted #D8abb1;
-  color: gray;
-}
-.compare-table .tr-table .table-link {
-  color: gray;
+.compare-table .table-head {
   border: 2px dotted #D8abb1;
 }
-.compare-table .tr-table .table-link .link {
+.compare-table .table-item {
+  border: 2px dotted #D8abb1;
+}
+.compare-table .table-item a {
   color: #b9264b;
 }
 
@@ -60,4 +46,4 @@ body {
   font-size: 30px;
 }
 
-/*# sourceMappingURL=compare.css.map */
+/*# sourceMappingURL=compare.cssclear.map */

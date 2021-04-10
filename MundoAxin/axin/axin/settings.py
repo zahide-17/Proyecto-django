@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'compare',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -123,5 +124,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+LOGIN_URL = '/login/'
 
 #STATICFILES_DIRS =(os.path.join(NASE_DIR,'static'),)

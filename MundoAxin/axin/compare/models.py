@@ -30,15 +30,15 @@ class Store(models.Model):
 
 class Category(models.Model):
     NAME = [
-        ("L6","Labial"),
-        ("S7","Sombras"),
-        ("R5","Rubor"),
-        ("B5","Bases"),
-        ("D0","Delineador"),
-        ("I0","Iluminador"),
-        ("C9","Corrector")
+        ("Labial","Labial"),
+        ("Sombras","Sombras"),
+        ("Rubor","Rubor"),
+        ("Bases","Bases"),
+        ("Delineador","Delineador"),
+        ("Iluminador","Iluminador"),
+        ("Corrector","Corrector")
     ]
-    name = models.CharField(choices=NAME, max_length=2)
+    name = models.CharField(choices=NAME, max_length=20)
 
     def __str__(self):
         return "{}".format(self.name)
@@ -54,14 +54,14 @@ class Product_Store(models.Model):
     name_category = models.ForeignKey(Category, related_name="category_name", on_delete=models.CASCADE)
 
     def __str__(self):
-        return "{}{}{}".format(self.id_product, self.name_product, self.price)
+        return "{}{}{}".format(self.id_product, self.name_product, self.price, self.image)
 
 class Product(models.Model):
     name_product = models.CharField(max_length=50)
     mark = models.CharField(max_length=30)
     image = models.CharField(max_length=256)
     name_category = models.ForeignKey(Category, related_name="product_category", on_delete=models.CASCADE)
-    id_product = models.ForeignKey(Product_Store, related_name="store_product", on_delete=models.CASCADE)
+    product_store = models.ForeignKey(Product_Store, default=1, on_delete=models.CASCADE)
 
     def __str__(self):
         return "{} {}".format(self.id_product, self.name_product, self.mark)

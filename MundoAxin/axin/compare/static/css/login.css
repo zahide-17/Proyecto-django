@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Merienda:wght@700&family=Yatra+One&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  width: 100px;
+  height: 100px;
+}
+
+body {
+  background: url("/static/logos/fondo-login.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.login-box {
+  font-family: "Merienda", cursive;
+  width: 320px;
+  height: 420px;
+  background-color: transparent;
+  border: 2px solid white;
+  color: #fff;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  padding: 70px 30px;
+}
+.login-box .login-img {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  top: -100px;
+  left: calc(42% - 50px);
+}
+.login-box h1 {
+  margin: 0;
+  padding: 0 20px;
+  text-align: center;
+  font-size: 22px;
+}
+.login-box .login-form {
+  font-family: "Merienda", cursive;
+}
+.login-box .login-form label {
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  display: block;
+}
+.login-box .login-form input {
+  width: 100%;
+  background-color: white;
+  margin-bottom: 20px;
+}
+.login-box .login-form .input-text {
+  font-family: "Merienda", cursive;
+  border: 2px solid #D8abb1;
+  background: transparent;
+  outline: none;
+  height: 40px;
+  color: #CFCFCF;
+  font-size: 16px;
+}
+.login-box .login-form .input-text::placeholder {
+  font-family: initial;
+  font-size: 12px;
+  color: white;
+  font-weight: bold;
+}
+.login-box .login-form .input-submit {
+  font-family: "Merienda", cursive;
+  border: none;
+  outline: none;
+  height: 40px;
+  background: #D8abb1;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 4px;
+}
+.login-box .login-form a {
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 20px;
+  color: white;
+}
+.login-box .login-form a:hover {
+  color: #CFCFCF;
+}
+
+/*# sourceMappingURL=login.css.map */
